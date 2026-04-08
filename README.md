@@ -181,6 +181,48 @@ Machine Learning
         └── Autoencoders
 ```
 
+## 📈 Machine Learning Visual Summary
+
+The main machine learning categories are:
+- **Supervised Learning**: learns from labeled examples
+- **Unsupervised Learning**: finds structure in unlabeled data
+- **Reinforcement Learning**: learns by reward and feedback
+- **Deep Learning**: uses layered neural networks for complex data
+
+```mermaid
+flowchart TD
+    A[Machine Learning]
+    A --> B[Supervised Learning]
+    A --> C[Unsupervised Learning]
+    A --> D[Reinforcement Learning]
+    A --> E[Deep Learning]
+    B --> B1[Regression]
+    B --> B2[Classification]
+    B --> B3[Semi-Supervised]
+    B1 --> B11[Linear Regression]
+    B1 --> B12[Polynomial Regression]
+    B1 --> B13[Ridge / Lasso]
+    B2 --> B21[Logistic Regression]
+    B2 --> B22[Decision Tree]
+    B2 --> B23[KNN]
+    B2 --> B24[Random Forest]
+    B2 --> B25[SVM]
+    C --> C1[Clustering]
+    C --> C2[Dimensionality Reduction]
+    C --> C3[Association Rules]
+    C --> C4[Anomaly Detection]
+    C1 --> C11[K-Means]
+    C1 --> C12[Hierarchical Clustering]
+    C1 --> C13[DBSCAN]
+    D --> D1[Q-Learning]
+    D --> D2[Policy Gradient]
+    D --> D3[Actor-Critic]
+    E --> E1[CNN]
+    E --> E2[RNN]
+    E --> E3[Transformers]
+    E --> E4[GANs / Autoencoders]
+```
+
 ### Supervised Learning
 
 Supervised learning uses labeled data where the desired outcome is known. The model learns the mapping between inputs and outputs.

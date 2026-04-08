@@ -183,44 +183,54 @@ Machine Learning
 
 ## 📈 Machine Learning Visual Summary
 
-The main machine learning categories are:
-- **Supervised Learning**: learns from labeled examples
-- **Unsupervised Learning**: finds structure in unlabeled data
-- **Reinforcement Learning**: learns by reward and feedback
-- **Deep Learning**: uses layered neural networks for complex data
+The main machine learning categories and their core purposes are:
+
+- **Supervised Learning**: learns patterns from labeled data.
+- **Unsupervised Learning**: discovers structure in unlabeled data.
+- **Reinforcement Learning**: learns optimal actions through reward.
+- **Deep Learning**: uses deep neural networks for complex problems.
+
+### Supervised vs Unsupervised vs Reinforcement
+
+| Category | What it learns | Example goal | Main methods |
+|---|---|---|---|
+| Supervised | Known labels | Predict house price or class label | Regression, Classification |
+| Unsupervised | Hidden structure | Group customers or reduce dimensions | Clustering, Association, Anomaly Detection |
+| Reinforcement | Action policy | Train an agent to win a game | Q-Learning, Policy Gradient |
+| Deep Learning | Complex feature hierarchies | Image, text, speech understanding | CNN, RNN, Transformer |
+
+### Regression vs Classification
+
+- **Regression** predicts a continuous number.
+  - Example: predict temperature, price, or salary.
+  - Common algorithms: Linear Regression, Polynomial Regression, Ridge, Lasso.
+- **Classification** predicts a discrete category.
+  - Example: classify email as spam or not spam.
+  - Common algorithms: Logistic Regression, Decision Tree, KNN, Random Forest, SVM.
 
 ```mermaid
 flowchart TD
-    A[Machine Learning]
-    A --> B[Supervised Learning]
-    A --> C[Unsupervised Learning]
-    A --> D[Reinforcement Learning]
-    A --> E[Deep Learning]
-    B --> B1[Regression]
-    B --> B2[Classification]
-    B --> B3[Semi-Supervised]
-    B1 --> B11[Linear Regression]
-    B1 --> B12[Polynomial Regression]
-    B1 --> B13[Ridge / Lasso]
-    B2 --> B21[Logistic Regression]
-    B2 --> B22[Decision Tree]
-    B2 --> B23[KNN]
-    B2 --> B24[Random Forest]
-    B2 --> B25[SVM]
-    C --> C1[Clustering]
-    C --> C2[Dimensionality Reduction]
-    C --> C3[Association Rules]
-    C --> C4[Anomaly Detection]
-    C1 --> C11[K-Means]
-    C1 --> C12[Hierarchical Clustering]
-    C1 --> C13[DBSCAN]
-    D --> D1[Q-Learning]
-    D --> D2[Policy Gradient]
-    D --> D3[Actor-Critic]
-    E --> E1[CNN]
-    E --> E2[RNN]
-    E --> E3[Transformers]
-    E --> E4[GANs / Autoencoders]
+    ML[Machine Learning]
+    ML --> SUP[Supervised Learning]
+    ML --> UNSUP[Unsupervised Learning]
+    ML --> RF[Reinforcement Learning]
+    ML --> DL[Deep Learning]
+    SUP --> REG[Regression]
+    SUP --> CLS[Classification]
+    REG --> LR[Linear Regression]
+    REG --> PR[Polynomial Regression]
+    REG --> RL[Ridge/Lasso]
+    CLS --> LOG[Logistic Regression]
+    CLS --> DT[Decision Tree]
+    CLS --> KNN[KNN]
+    CLS --> RF2[Random Forest]
+
+    UNSUP --> CLU[Clustering]
+    UNSUP --> DIM[Dimensionality Reduction]
+    CLU --> KM[K-Means]
+    CLU --> HC[Hierarchical Clustering]
+    DIM --> PCA[PCA]
+    DIM --> TSE[t-SNE]
 ```
 
 ### Supervised Learning

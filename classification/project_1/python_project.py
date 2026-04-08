@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import StandardScaler
 
-# Generate synthetic data
+# Generate synthetic classification data
 np.random.seed(42)
-n_samples = 1000
+n_samples = 300
 age = np.random.randint(18, 66, n_samples)
 income = np.random.randint(20000, 100001, n_samples)
 browsing_time = np.random.randint(1, 61, n_samples)
@@ -20,7 +20,7 @@ df = pd.DataFrame({
     'purchase': purchase
 })
 
-# Save to CSV
+# Save synthetic dataset to CSV
 df.to_csv('data_2.csv', index=False)
 
 # Features and target
@@ -34,8 +34,8 @@ X_scaled = scaler.fit_transform(X)
 # Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Model
-model = LogisticRegression()
+# Classification model
+model = DecisionTreeClassifier(random_state=42)
 
 # Train
 model.fit(X_train, y_train)
@@ -47,6 +47,3 @@ y_pred = model.predict(X_test)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
-
-# Coefficients
-print("Coefficients:", model.coef_)
